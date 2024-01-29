@@ -23,4 +23,6 @@ class FormController extends Controller
         }
         return view('pages.instagram', ['type' => $type]);
     }
+
+
 }
