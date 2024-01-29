@@ -11,15 +11,18 @@ return new class extends Migration
      */
     public function up()
 {
-    Schema::create('requests', function (Blueprint $table) {
+    Schema::create('insta_requests', function (Blueprint $table) {
         $table->id();
         $table->string('transaction_id');
         $table->string('package');
         $table->string('username');
         $table->string('url');
-        $table->string('request_for');
-        $table->string('app_name');
+        $table->string('user_type');
+        $table->string('request_for')->nullable();
+        $table->string('status')->nullable();
+        $table->string('email');
         $table->timestamps();
+
     });
 }
 
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('requests');
+        Schema::dropIfExists('insta_requests');
     }
 };

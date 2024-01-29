@@ -53,7 +53,7 @@
                     <div class="box">
                         <h3>Instagram Likes</h3>
                         <h4>
-                            <sup>$</sup>0
+                            <sup>₹</sup>59
                         </h4>
                         <ul>
                             <li>✅ Instant Delivery</li>
@@ -65,7 +65,7 @@
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/instagram_likes?value=likes') }}" class="btn-buy">Get Instagram Likes</a>
+                            <a href="{{ url('/instagram?value=likes') }}" class="btn-buy">Get Instagram Likes</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <div class="box">
                         <h3>Instagram Followers</h3>
                         <h4>
-                            <sup>$</sup>0
+                            <sup>₹</sup>59
                         </h4>
                         <ul>
                             <li>✅ Instant Delivery</li>
@@ -85,7 +85,7 @@
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/instagram_likes?value=followers') }}" class="btn-buy">Get Instagram Followers</a>
+                            <a href="{{ url('/instagram?value=followers') }}" class="btn-buy">Get Instagram Followers</a>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                     <div class="box">
                         <h3>Instagram Views</h3>
                         <h4>
-                            <sup>$</sup>0
+                            <sup>₹</sup>59
                         </h4>
                         <ul>
                             <li>✅ Instant Delivery</li>
@@ -105,7 +105,7 @@
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href=" -instagram-views.html" class="btn-buy">Get Instagram Views</a>
+                            <a href="{{ url('/instagram?value=views') }}" class="btn-buy">Get Instagram Views</a>
                         </div>
                     </div>
                 </div>
