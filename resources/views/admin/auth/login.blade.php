@@ -1,6 +1,4 @@
-@extends('layouts.app')
-@section('pageTitle', 'SmartTitle')
-@section('content')
+
 @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
@@ -37,4 +35,3 @@
     </div>
   </div>
 
-  @endsection
