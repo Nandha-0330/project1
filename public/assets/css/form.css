@@ -9343,3 +9343,16 @@ section.faq .faq-card.faq-card--open .faq-card__body {
     padding: 19px 80px 19px 19px;
   }
 }
+
+
+.input-with-button {
+    position: relative;
+    display: inline-block;
+}
+
+.button-right {
+    position: absolute;
+
+    right: 0;
+    /* Adjust as needed for vertical alignment */
+}

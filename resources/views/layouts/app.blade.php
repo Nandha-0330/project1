@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>@yield('pageTitle', 'Default Title')</title>
-    <meta content="Using the PrimeLikes service, you are able to receive unlimited free likes, followers and views on website such as Instagram, TikTok, Twitter and Facebook." name="description">
+    <meta content="Using the Jeranyt service, you are able to receive unlimited  likes, followers and views on website such as Instagram, TikTok, Twitter and Facebook." name="description">
     <!-- Favicons -->
     <link href="{{ asset('img/favicon.png') }}" rel="icon">
     <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin="anonymous">

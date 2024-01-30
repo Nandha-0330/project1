@@ -10,54 +10,28 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin="anonymous">
     <meta name="description" content="Do you want   Instagram Followers? Receive fast,   and unlimited Instagram followers with  DEMO." />
     <link href="{{ asset('assets/css/form.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
     <div class="modern-checkout">
+
         <section class="modern-checkout__header">
             <div class="header__inner">
-                <a class="header__logo" href="https://www.prime-likes.com/">
+                <a class="header__logo" >
                     <img src="img/prime-likes-logo.png" draggable="false" width="220" />
                 </a>
             </div>
         </section>
+
         <section class="modern-checkout__body">
 
-        @include('pages.form.insta_form')
+
+            @include('pages.form.insta_form')
          <!-- form -->
-                <div class="body__card card-step card-select">
-                    <h2>Frequently Asked Questions:</h2>
-                    <div class="message message--red">
-                        <div class="message__title">
-                            <p></p>
-                            <img class="message__close" src="img/cross-black.svg" draggable="false" alt="Black X icon" />
-                        </div>
-                        <div class="message__body">
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="form">
-                        <strong>Is this service  ?</strong>
-                        <p>Yes, the  DEMO service is 100%  .</p>
-                        <br>
-                        <strong>Is this service safe to use?</strong>
-                        <p>Yes, the  DEMO service has been tested by thousands of people without any issues.</p>
-                        <br>
-                        <strong>Are the likes/follows/views etc from real people?</strong>
-                        <p>Yes, the  DEMO service only delivers likes, follows, views etc from real people and accounts. No fakes or bots.</p>
-                        <br>
-                        <strong>Do you need my password?</strong>
-                        <p>No, the  DEMO service will never ask for your social media password for maximum security.</p>
-                        <br>
-                        <strong>How quickly will I see the results?</strong>
-                        <p>Almost instantly. The  DEMO service aims to deliver all social media requests within a couple of minutes, however, during busy periods it could take up to an hour. </p>
-                        <br>
-                        <strong>How often can I use this service?</strong>
-                        <p>As often as you want. The  DEMO service has been designed to allow users to request as many   social media services as they like. </p>
-                        <br>
-                    </div>
-                </div>
                 <div class="body__card card-step card-select">
                     <h3>After one of our other social media services instead?</h3>
                     <br>
