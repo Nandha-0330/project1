@@ -21,8 +21,15 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
-Route::get('/instagram', [FormController::class, 'index'])->name('instagram');
-Route::post('/store-requestt', [FormController::class, 'store'])->name('store.request');
+Route::get('/instagram', [FormController::class, 'Instagram'])->name('instagram');
+Route::post('/store-insta-request', [FormController::class, 'store'])->name('store.request');
+
+Route::get('/facebook', [FormController::class, 'Facebook'])->name('instagram');
+Route::post('/store-fb-request', [FormController::class, 'store'])->name('store.request.fb');
+
+Route::get('/thank-you', function () {
+    return view('thankyou');
+})->name('thankyou');
 
 
 Route::view('register','admin.auth.register')->name('admin.register.view')->middleware('guest');

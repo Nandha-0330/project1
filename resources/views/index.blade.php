@@ -2,21 +2,22 @@
 @section('pageTitle', 'Social Media Likes')
 @section('content')
 <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-9 text-center">
-                    <img width="500px;" src="img/prime-likes-logo.png" alt="" class="img-fluid" style="padding-bottom:25px;">
-                    <h1>  Social Media Likes, Followers and Views</h1>
-                    <br>
-                    <h2 style="font-weight:bold;">Using the DEMO  service, you are able to receive unlimited likes, followers and views on website such as Instagram, TikTok, Twitter, Threads and Facebook.</h2>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="#pricing" class="btn-get-started scrollto">Click here to get your social media likes, followers and views</a>
+<section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-9 text-center">
+                <img width="500px;" src="img/prime-likes-logo.png" alt="" class="img-fluid" style="padding-bottom:25px;">
+                <h1>Jeranyt - Boost Your Social Media Presence</h1>
+                <br>
+                <h2 style="font-weight:bold;">With Jeranyt, you can receive unlimited likes, followers, and views on platforms like Instagram, TikTok, Twitter, Threads, and Facebook.</h2>
             </div>
         </div>
-    </section>
+        <div class="text-center">
+            <a href="#pricing" class="btn-get-started scrollto">Click here to boost your social media presence</a>
+        </div>
+    </div>
+</section>
+
     <!-- End Hero -->
     <main id="main"></main>
     <!-- End #main -->
@@ -26,90 +27,91 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-title">
-                <h2>Get Started with your social media likes, followers and views:</h2>
-                <strong>We offer unlimted likes, views and followers for social media platforms such as Instagram, TikTok, Twitter, Threads and Facebook. <br>
-                    <br>Select the service you require below to get started. </strong>
+                <h2>Enhance Your Social Media Presence Today:</h2>
+                <strong>Unlimited likes, views, and followers for your favorite platforms: Instagram, TikTok, Twitter, Threads, and Facebook.<br>
+                Choose your service below and start growing your social media presence.</strong>
             </div>
             <div class="box">
-                <h3>Quickly view our services by clicking the buttons below:</h3>
+                <h3>Explore Our Services:</h3>
                 <div class="btn-wrap">
-                    <a href="#Instagram" class="btn-buy" style="margin:5px;">Instagram services</a>
-                    <!-- <a href="#TikTok" class="btn-buy" style="margin:5px;">  TikTok services</a>
-                    <a href="#Twitter" class="btn-buy" style="margin:5px;">  Twitter services</a> -->
-                    <a href="#Facebook" class="btn-buy" style="margin:5px;">Facebook services</a>
-                    <!-- <a href="#Threads" class="btn-buy" style="margin:5px;">  Threads services</a> -->
+                    <a href="#Instagram" class="btn-buy" style="margin:5px;">Explore Instagram Services</a>
+                    <!-- <a href="#TikTok" class="btn-buy" style="margin:5px;">Explore TikTok Services</a>
+                    <a href="#Twitter" class="btn-buy" style="margin:5px;">Explore Twitter Services</a> -->
+                    <a href="#Facebook" class="btn-buy" style="margin:5px;">Explore Facebook Services</a>
+                    <!-- <a href="#Threads" class="btn-buy" style="margin:5px;">Explore Threads Services</a> -->
                 </div>
             </div>
             <br>
             <br>
             <div id="Instagram" class="row">
                 <h3 style="font-weight:bold;padding-bottom:5x;">
-                    <i class="bi bi-instagram"></i>Instagram Likes, Followers and Views <i class="bi bi-instagram"></i>
+                    <i class="bi bi-instagram"></i>Supercharge Your Instagram Presence! <i class="bi bi-instagram"></i>
                 </h3>
-                <p>Looking to grow your followers and engagement on Instagram? Select one of the options below:</p>
+                <p>Elevate your Instagram game with our exclusive services tailored just for you. Ready to skyrocket your likes, followers, and views? Choose your boost below:</p>
                 <br>
                 <br>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Instagram Likes</h3>
+                        <h3>Boost Your Likes</h3>
                         <h4>
-                            <sup>₹</sup>59
+                            <sup>₹</sup>39+
                         </h4>
                         <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Likes</li>
-                            <li>✅ Unlimited Use</li>
+                            <li>🚀 Instant Likes Delivery</li>
+                            <li>🔒 No Password Required</li>
+                            <li>🌟 High Quality Likes</li>
+                            <li>🔄 Unlimited Use</li>
                             <strong>
-                                <li>✅ Completely  </li>
+                                <li>✅ Completely Safe</li>
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/instagram?value=likes') }}" class="btn-buy">Get Instagram Likes</a>
+                            <a href="{{ url('/instagram?value=likes') }}" class="btn-buy">Get More Likes Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Instagram Followers</h3>
+                        <h3>Skyrocket Your Followers</h3>
                         <h4>
-                            <sup>₹</sup>59
+                            <sup>₹</sup>39+
                         </h4>
                         <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Followers</li>
-                            <li>✅ Unlimited Use</li>
+                            <li>🚀 Instant Followers Delivery</li>
+                            <li>🔒 No Password Required</li>
+                            <li>🌟 High Quality Followers</li>
+                            <li>🔄 Unlimited Use</li>
                             <strong>
-                                <li>✅ Completely  </li>
+                                <li>✅ Completely Safe</li>
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/instagram?value=followers') }}" class="btn-buy">Get Instagram Followers</a>
+                            <a href="{{ url('/instagram?value=followers') }}" class="btn-buy">Get More Followers Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Instagram Views</h3>
+                        <h3>Boost Your Views</h3>
                         <h4>
-                            <sup>₹</sup>59
+                            <sup>₹</sup>39+
                         </h4>
                         <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Views</li>
-                            <li>✅ Unlimited Use</li>
+                            <li>🚀 Instant Views Delivery</li>
+                            <li>🔒 No Password Required</li>
+                            <li>🌟 High Quality Views</li>
+                            <li>🔄 Unlimited Use</li>
                             <strong>
-                                <li>✅ Completely  </li>
+                                <li>✅ Completely Safe</li>
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/instagram?value=views') }}" class="btn-buy">Get Instagram Views</a>
+                            <a href="{{ url('/instagram?value=views') }}" class="btn-buy">Get More Views Now</a>
                         </div>
                     </div>
                 </div>
             </div>
+
             {{-- <div id="TikTok" class="row">
                 <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
                     <i class="bi bi-tiktok"></i>   TikTok Likes, Followers and Views <i class="bi bi-tiktok"></i>

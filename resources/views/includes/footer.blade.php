@@ -17,13 +17,13 @@
                     <h4>Instagram Services</h4>
                     <ul>
                         <li>
-                            <a href="https://www.prime-likes.com/free-instagram-likes.html">Free Instagram Likes</a>
+                            <a href="https://www.prime-likes.com/free-instagram-likes.html">Instagram Likes</a>
                         </li>
                         <li>
-                            <a href="https://www.prime-likes.com/free-instagram-followers.html">Free Instagram Followers</a>
+                            <a href="https://www.prime-likes.com/free-instagram-followers.html">Instagram Followers</a>
                         </li>
                         <li>
-                            <a href="https://www.prime-likes.com/free-instagram-views.html">Free Instagram Views</a>
+                            <a href="https://www.prime-likes.com/free-instagram-views.html">Instagram Views</a>
                         </li>
                     </ul>
                 </div>
@@ -57,10 +57,10 @@
                     <h4>Facebook Services</h4>
                     <ul>
                         <li>
-                            <a href="https://www.prime-likes.com/free-facebook-likes.html">Free Facebook Likes</a>
+                            <a href="https://www.prime-likes.com/free-facebook-likes.html">Facebook Likes</a>
                         </li>
                         <li>
-                            <a href="https://www.prime-likes.com/free-facebook-followers.html">Free Facebook Followers</a>
+                            <a href="https://www.prime-likes.com/free-facebook-followers.html">Facebook Followers</a>
                         </li>
                 </div>
                 {{-- <div class="col-lg-2 col-md-6 footer-links">

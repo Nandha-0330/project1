@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FacebookRequest;
 use App\Models\InstaRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class FormController extends Controller
 {
-    public function index(Request $request)
+    public function Instagram(Request $request)
     {
+        $app_name = 'Instagram';
         $value = $request->input('value', 'default_value');
         if ($value === 'likes') {
             $type = 'Likes';
@@ -23,7 +25,7 @@ class FormController extends Controller
         else {
             abort(404);
         }
-        return view('pages.instagram', ['type' => $type]);
+        return view('pages.instagram', ['type' => $type , 'app_name' => $app_name]);
     }
 
     public function store(Request $request)
@@ -53,7 +55,55 @@ class FormController extends Controller
 
         );
         Session::flash('success', 'Data inserted successfully!');
-        return redirect()->route('home');
+        return redirect()->route('thankyou');
+
+
+    }
+
+    public function facebook(Request $request)
+    {
+        $app_name = 'Facebook';
+        $value = $request->input('value', 'default_value');
+        if ($value === 'likes') {
+            $type = 'Likes';
+        }
+        elseif ($value === 'followers') {
+            $type = 'Followers';
+        }
+        else {
+            abort(404);
+        }
+        return view('pages.facebook', ['type' => $type , 'app_name' => $app_name]);
+    }
+
+    public function fbstore(Request $request)
+    {
+        // Validate the incoming request data
+        $request->validate([
+            'transaction_id' => 'required|string',
+            'package' => 'required|string',
+            'username' => 'required|string',
+            'url' => 'required|url',
+            'user_type' => 'required|string',
+            'request_for ' => 'string',
+            'email' => 'required|email',
+        ]);
+        // Create a new request record in the database
+        FacebookRequest::create([
+            'transaction_id' => $request->input('transaction_id'),
+            'package'=> $request->input('package'),
+            'username' => $request->input('username'),
+            'url' => $request->input('url'),
+            'user_type' => $request->input('user_type'),
+            'request_for' => $request->input('request_for'),
+            'email' => $request->input('email'),
+
+
+        ]
+
+        );
+        Session::flash('success', 'Data inserted successfully!');
+        return redirect()->route('thankyou');
 
 
     }

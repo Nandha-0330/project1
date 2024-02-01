@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <title>  Instagram Followers (Fast and Unlimited) | Prime-Likes.com</title>
+    <title>  {{$app_name}} {{$type}} (Fast and Unlimited) | Jeranyt Services</title>
     <link rel="icon" href="img/favicon.png">
     <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin="anonymous">
     <meta name="description" content="Do you want   Instagram Followers? Receive fast,   and unlimited Instagram followers with  DEMO." />

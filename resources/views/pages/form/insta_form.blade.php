@@ -2,20 +2,20 @@
     <div class="body__description">
         <h1>Instagram {{ $type }}</h1>
         <br>
-        <p>DEMO is a unique Instagram platform where you can get followers on Instagram, fast and unlimited. Don't take
+        <p>Jeranyt is a unique Instagram platform where you can get followers on Instagram, fast and unlimited. Don't take
             our word for it, use form below to receive your fast, Instagram followers.</p>
     </div>
     <div class="body__imprint imprint-subscription-features">
         <div class="imprint-subscription-features__item">
             <div class="icon">
-                |
-                <img src="img/human-outline.svg">
+
+                <img src="https://www.prime-likes.com/img/human-outline.svg">
             </div>
             <p>Only real {{ $type }} from real Instagram users.</p>
         </div>
         <div class="imprint-subscription-features__item">
             <div class="icon">
-                <img src="img/ -outline.svg">
+                <img src="">
             </div>
             <p>This service is absolutely and can be used an unlimited amount of times.</p>
         </div>
@@ -345,25 +345,15 @@
                         <div id="step-1" class="form-step">
                             <input type="hidden" value="{{$type}}" name="request_for">
                             <div class="form-group">
-                                <label for="country-select">Select User Type</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-globe"></i></span>
-                                    </div>
-                                    <select id="country-select" name="user_type" class="form-control">
-                                        <option value="#">Select User Type</option>
-                                        <option value="foreign">Foreign</option>
-                                        <option value="indian">Indian</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label for="package-select">Select Package</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-box"></i></span>
                                     </div>
                                     <select id="package-select" name="package" class="form-control">
+                                        <option value="39_1000 {{ $type }}">39 Rs - 1000 {{ $type }}</option>
+                                        <option value="98_5000 {{ $type }}">98 Rs - 5000 {{ $type }}</option>
+                                        <option value="190_10,000 {{$type}}">190 Rs - 10,000 {{ $type }}</option>
                                     </select>
                                 </div>
                             </div>
