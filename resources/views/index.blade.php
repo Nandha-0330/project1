@@ -111,143 +111,6 @@
                     </div>
                 </div>
             </div>
-
-            {{-- <div id="TikTok" class="row">
-                <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
-                    <i class="bi bi-tiktok"></i>   TikTok Likes, Followers and Views <i class="bi bi-tiktok"></i>
-                </h3>
-                <p>Looking to grow your followers and engagement on TikTok? Select one of the options below:</p>
-                <br>
-                <br>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>  TikTok Likes</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Likes</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -tiktok-likes.html" class="btn-buy">Get   TikTok Likes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>  TikTok Followers</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Followers</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -tiktok-followers.html" class="btn-buy">Get   TikTok Followers</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>  TikTok Views</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Views</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -tiktok-views.html" class="btn-buy">Get   TikTok Views</a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-            {{-- <div id="Twitter" class="row">
-                <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
-                    <i class="bi bi-twitter"></i>   Twitter Likes, Followers and Retweets <i class="bi bi-twitter"></i>
-                </h3>
-                <p>Looking to grow your followers and engagement on Twitter? Select one of the options below:</p>
-                <br>
-                <br>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>  Twitter Likes</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Likes</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -twitter-likes.html" class="btn-buy">Get   Twitter Likes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>  Twitter Followers</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Followers</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -twitter-followers.html" class="btn-buy">Get   Twitter Followers</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>  Twitter Retweets</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Retweets</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -twitter-retweets.html" class="btn-buy">Get   Twitter Retweets</a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
             <div id="Facebook" class="row">
                 <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
                     <i class="bi bi-facebook"></i>Facebook Likes and Followers <i class="bi bi-facebook"></i>
@@ -257,17 +120,17 @@
                 <br>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Facebook Followers</h3>
+                    <h3>Skyrocket Your Followers</h3>
                         <h4>
-                            <sup>$</sup>0
+                            <sup>₹</sup>590+
                         </h4>
                         <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Followers</li>
-                            <li>✅ Unlimited Use</li>
+                            <li>🚀 Instant Followers Delivery</li>
+                            <li>🔒 No Password Required</li>
+                            <li>🌟 High Quality Followers</li>
+                            <li>🔄 Unlimited Use</li>
                             <strong>
-                                <li>✅ Completely  </li>
+                             <li>✅ Completely Safe</li>
                             </strong>
                         </ul>
                         <div class="btn-wrap">
@@ -275,26 +138,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>Facebook Followers</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Followers</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -facebook-followers.html" class="btn-buy">Get Facebook Followers</a>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <div id="Youtube" class="row">
                 <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
@@ -305,93 +148,27 @@
                 <br>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Youtube Followers</h3>
+                        <h3>Skyrocket Your Subscribers</h3>
                         <h4>
-                            <sup>$</sup>0
+                            <sup>₹</sup>590+
                         </h4>
                         <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Followers</li>
-                            <li>✅ Unlimited Use</li>
+                            <li>🚀 Instant Subscribers Delivery</li>
+                            <li>🔒 No Password Required</li>
+                            <li>🌟 High Quality Subscribers</li>
+                            <li>🔄 Unlimited Use</li>
                             <strong>
-                                <li>✅ Completely  </li>
+                             <li>✅ Completely Safe</li>
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/youtube?value=subscribers') }}" class="btn-buy">Get Facebook Followers</a>
+                            <a href="{{ url('/youtube?value=subscribers') }}" class="btn-buy">Get Youtube Subscribers</a>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>Facebook Followers</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Followers</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -facebook-followers.html" class="btn-buy">Get Facebook Followers</a>
-                        </div>
-                    </div>
-                </div> -->
+                
             </div>
-            {{-- <div id="Threads" class="row">
-                <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
-                    <i class="bi bi-instagram"></i>   Threads Likes and Followers <i class="bi bi-instagram"></i>
-                </h3>
-                <p>Looking to grow your likes and engagement on Threads? Select one of the options below:</p>
-                <br>
-                <br>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>  Threads Likes</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Likes</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -threads-likes.html" class="btn-buy">Get   Threads Likes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <h3>  Threads Followers</h3>
-                        <h4>
-                            <sup>$</sup>0
-                        </h4>
-                        <ul>
-                            <li>✅ Instant Delivery</li>
-                            <li>✅ No Password Required</li>
-                            <li>✅ High Quality Followers</li>
-                            <li>✅ Unlimited Use</li>
-                            <strong>
-                                <li>✅ Completely  </li>
-                            </strong>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href=" -threads-followers.html" class="btn-buy">Get   Threads Followers</a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
+            
         </div>
     </section>
     <!-- End Pricing Section -->

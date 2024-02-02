@@ -5,21 +5,7 @@
         <p>Jeranyt is a unique Facebook platform where you can get followers on Facebook, fast and unlimited. Don't take
             our word for it, use form below to receive your fast, Facebook followers.</p>
     </div>
-    <div class="body__imprint imprint-subscription-features">
-        <div class="imprint-subscription-features__item">
-            <div class="icon">
-
-                <img src="https://www.prime-likes.com/img/human-outline.svg">
-            </div>
-            <p>Only real {{ $type }} from real Facebook users.</p>
-        </div>
-        <div class="imprint-subscription-features__item">
-            <div class="icon">
-                <img src="">
-            </div>
-            <p>This service is absolutely paid and can be used an unlimited amount of times.</p>
-        </div>
-    </div>
+    
     <div class="body__card card-step card-select">
         <h2>Select your Facebook {{ $type }} package below:</h2>
         <div class="message message--red">

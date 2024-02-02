@@ -17,13 +17,13 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="free-instagram-likes.html">Instagram Likes</a>
+                            <a href="{{ url('/instagram?value=likes') }}">Instagram Likes</a>
                         </li>
                         <li>
-                            <a href="free-instagram-followers.html">Instagram Followers</a>
+                            <a href="{{ url('/instagram?value=followers') }}">Instagram Followers</a>
                         </li>
                         <li>
-                            <a href="free-instagram-views.html">Instagram Views</a>
+                            <a href="{{ url('/instagram?value=views') }}">Instagram Views</a>
                         </li>
                     </ul>
                 </li>
@@ -34,11 +34,21 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="free-facebook-followers.html">Facebook Followers</a>
+                            <a href="{{ url('/facebook?value=followers') }}">Facebook Followers</a>
                         </li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">
+                        <span>Youtube Services</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul>
                         <li>
-                            <a href="free-facebook-likes.html">Facebook Likes</a>
+                            <a href="{{ url('/youtube?value=subscribers') }}">Youtube Subscribers</a>
                         </li>
+                        
                     </ul>
                 </li>
                 <!-- <li class="dropdown">
