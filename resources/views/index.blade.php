@@ -257,25 +257,25 @@
                 <br>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Facebook Likes</h3>
+                        <h3>Facebook Followers</h3>
                         <h4>
                             <sup>$</sup>0
                         </h4>
                         <ul>
                             <li>✅ Instant Delivery</li>
                             <li>✅ No Password Required</li>
-                            <li>✅ High Quality Likes</li>
+                            <li>✅ High Quality Followers</li>
                             <li>✅ Unlimited Use</li>
                             <strong>
                                 <li>✅ Completely  </li>
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href=" -facebook-likes.html" class="btn-buy">Get Facebook Likes</a>
+                            <a href="{{ url('/facebook?value=followers') }}" class="btn-buy">Get Facebook Followers</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="box">
                         <h3>Facebook Followers</h3>
                         <h4>
@@ -294,7 +294,55 @@
                             <a href=" -facebook-followers.html" class="btn-buy">Get Facebook Followers</a>
                         </div>
                     </div>
+                </div> -->
+            </div>
+            <div id="Youtube" class="row">
+                <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
+                    <i class="bi bi-youtube"></i>Youtube <i class="bi bi-youtube"></i>
+                </h3>
+                <p>Looking to grow your Subscribers and engagement on Youtube? Select one of the options below:</p>
+                <br>
+                <br>
+                <div class="col-lg-4 col-md-6">
+                    <div class="box">
+                        <h3>Youtube Followers</h3>
+                        <h4>
+                            <sup>$</sup>0
+                        </h4>
+                        <ul>
+                            <li>✅ Instant Delivery</li>
+                            <li>✅ No Password Required</li>
+                            <li>✅ High Quality Followers</li>
+                            <li>✅ Unlimited Use</li>
+                            <strong>
+                                <li>✅ Completely  </li>
+                            </strong>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="{{ url('/youtube?value=subscribers') }}" class="btn-buy">Get Facebook Followers</a>
+                        </div>
+                    </div>
                 </div>
+                <!-- <div class="col-lg-4 col-md-6">
+                    <div class="box">
+                        <h3>Facebook Followers</h3>
+                        <h4>
+                            <sup>$</sup>0
+                        </h4>
+                        <ul>
+                            <li>✅ Instant Delivery</li>
+                            <li>✅ No Password Required</li>
+                            <li>✅ High Quality Followers</li>
+                            <li>✅ Unlimited Use</li>
+                            <strong>
+                                <li>✅ Completely  </li>
+                            </strong>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href=" -facebook-followers.html" class="btn-buy">Get Facebook Followers</a>
+                        </div>
+                    </div>
+                </div> -->
             </div>
             {{-- <div id="Threads" class="row">
                 <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">

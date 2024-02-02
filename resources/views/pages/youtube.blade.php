@@ -29,7 +29,7 @@
 
         <section class="modern-checkout__body">
 
-            @include('pages.form.insta_form')
+            @include('pages.form.yt_form')
          <!-- form -->
                 
         </section>

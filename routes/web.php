@@ -24,12 +24,13 @@ Route::get('/', function () {
 Route::get('/instagram', [FormController::class, 'Instagram'])->name('instagram');
 Route::post('/store-insta-request', [FormController::class, 'store'])->name('store.request');
 
-Route::get('/facebook', [FormController::class, 'Facebook'])->name('instagram');
-Route::post('/store-fb-request', [FormController::class, 'store'])->name('store.request.fb');
+Route::get('/facebook', [FormController::class, 'Facebook'])->name('Facebook');
+Route::post('/store-fb-request', [FormController::class, 'fbstore'])->name('store.request.fb');
 
-Route::get('/thank-you', function () {
-    return view('thankyou');
-})->name('thankyou');
+Route::get('/youtube', [FormController::class, 'youtube'])->name('youtube');
+Route::post('/store-yt-request', [FormController::class, 'ytstore'])->name('store.request.yt');
+
+Route::get('/thank-you', function () {return view('thankyou');})->name('thankyou');
 
 
 Route::view('register','admin.auth.register')->name('admin.register.view')->middleware('guest');

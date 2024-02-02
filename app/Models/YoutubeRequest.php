@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class InstaRequest extends Model
+class YoutubeRequest extends Model
 {
     protected $fillable = [
-        'transaction_id', 'package', 'username','url','user_type','request_for','email','image', 
+        'transaction_id', 'package', 'username','url','request_for','email','image', 
 
     ];
 }

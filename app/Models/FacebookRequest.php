@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class FacebookRequest extends Model
 {
     protected $fillable = [
-        'transaction_id', 'package', 'username','url','user_type','request_for','email',
+        'transaction_id', 'package', 'username','url','request_for','email','image',
 
     ];
 }

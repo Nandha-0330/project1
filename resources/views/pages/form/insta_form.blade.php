@@ -33,23 +33,23 @@
         </div>
 
         @if ($errors->any())
-                        <div class="bg-red-200 text-red-800 p-4 rounded mb-4">
-                            <strong>Validation Error:</strong>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-         @endif
+        <div  >
+            <strong>Validation Error:</strong>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li class="bg-red-200 text-red-800 p-4 rounded mb-2 ">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
 
         @if ($type === 'Likes')
         <div class="container">
             <div class="row justify-content-center mt-2">
                 <div class="col-md-12">
-                    <form id="multi-step-form" action="{{ route('store.request') }}" method="post">
-                        @csrf
+                <form id="multi-step-form" action="{{ route('store.request') }}" method="post"  enctype="multipart/form-data">
+                  @csrf
                         <div id="step-1" class="form-step">
                             <input type="hidden" value="{{$type}}" name="request_for">
                             <div class="form-group">
@@ -121,6 +121,15 @@
                                     <input id="transaction-input" type="text" name="transaction_id" class="form-control" placeholder="Transaction ID">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="image-upload">Screenshot:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-image"></i></span>
+                                    </div>
+                                    <input id="image-upload" type="file" name="image" class="form-control">
+                                </div>
+                            </div>
 
                             <div class="text-center">
                                 <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Previous</button>
@@ -132,216 +141,225 @@
             </div>
         </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
-            <script>
-                function nextStep() {
-                        // Validate step 1 fields
-                        var package = document.getElementsByName('package')[0].value;
-                        var country = document.getElementsByName('user_type')[0].value;
-                        var username = document.getElementsByName('username')[0].value;
-                        var email = document.getElementsByName('email')[0].value;
-                        var url = document.getElementsByName('url')[0].value;
+        <script>
+            function nextStep() {
+                // Validate step 1 fields
+                var package = document.getElementsByName('package')[0].value;
+                var country = document.getElementsByName('user_type')[0].value;
+                var username = document.getElementsByName('username')[0].value;
+                var email = document.getElementsByName('email')[0].value;
+                var url = document.getElementsByName('url')[0].value;
 
-                        if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
-                            alert('Please fill in all fields .');
-                            return;
-                        }
+                if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
+                    alert('Please fill in all fields .');
+                    return;
+                }
 
-                        document.getElementById('step-1').style.display = 'none';
-                        document.getElementById('step-2').style.display = 'block';
-                    }
+                document.getElementById('step-1').style.display = 'none';
+                document.getElementById('step-2').style.display = 'block';
+            }
 
-                    function prevStep() {
-                        document.getElementById('step-2').style.display = 'none';
-                        document.getElementById('step-1').style.display = 'block';
-                    }
+            function prevStep() {
+                document.getElementById('step-2').style.display = 'none';
+                document.getElementById('step-1').style.display = 'block';
+            }
 
-                    document.getElementById('package-select').addEventListener('change', function() {
-                        var selectedOption = this.value.split('_');
-                        var price = selectedOption[0];
-                        var request = selectedOption[1];
-                    });
-                document.getElementById('country-select').addEventListener('change', function() {
-                    var packageSelect = document.getElementById('package-select');
-                    var selectedCountry = this.value;
+            document.getElementById('package-select').addEventListener('change', function() {
+                var selectedOption = this.value.split('_');
+                var price = selectedOption[0];
+                var request = selectedOption[1];
+            });
+            document.getElementById('country-select').addEventListener('change', function() {
+                var packageSelect = document.getElementById('package-select');
+                var selectedCountry = this.value;
 
-                    // Clear previous options
-                    // packageSelect.innerHTML = '';
+                // Clear previous options
+                packageSelect.innerHTML = '';
 
-                    // Add options based on selected country
-                    if (selectedCountry === 'foreign') {
-                        packageSelect.add(new Option('39 Rs - 500 {{ $type }}', '39 Rs_500 {{ $type }}'));
-                        packageSelect.add(new Option('59 Rs - 1000 {{ $type }}', '59 Rs_1000 {{ $type }}'));
-                        packageSelect.add(new Option('99 Rs - 5000 {{ $type }}', '99_5000 {{ $type }}'));
-                        packageSelect.add(new Option('199 Rs - 10000 {{ $type }}', '199_10000 {{ $type }}'));
+                // Add options based on selected country
+                if (selectedCountry === 'foreign') {
+                    packageSelect.add(new Option('₹39 - 500 {{ $type }}', '39 Rs_500 {{ $type }}'));
+                    packageSelect.add(new Option('₹59 - 1000 {{ $type }}', '59 Rs_1000 {{ $type }}'));
+                    packageSelect.add(new Option('₹99 - 5000 {{ $type }}', '99_5000 {{ $type }}'));
+                    packageSelect.add(new Option('₹199 - 10000 {{ $type }}', '199_10000 {{ $type }}'));
 
-                        // Add more options as needed for foreign packages
-                    } else if (selectedCountry === 'indian') {
-                        packageSelect.add(new Option('49 Rs - 500 {{ $type }}', '49_500 {{ $type }}'));
-                        packageSelect.add(new Option('89 Rs - 1000 {{ $type }}', '89_1000 {{ $type }}'));
-                        packageSelect.add(new Option('198 Rs - 5000 {{ $type }}', '198_5000 {{ $type }}'));
-                        packageSelect.add(new Option('390 Rs - 10000 {{ $type }}', '390_10000 {{ $type }}'));
-                        // Add more options as needed for Indian packages
-                    }
-                });
-            </script>
+                    // Add more options as needed for foreign packages
+                } else if (selectedCountry === 'indian') {
+                    packageSelect.add(new Option('₹49 - 500 {{ $type }}', '49_500 {{ $type }}'));
+                    packageSelect.add(new Option('₹89 - 1000 {{ $type }}', '89_1000 {{ $type }}'));
+                    packageSelect.add(new Option('₹198 - 5000 {{ $type }}', '198_5000 {{ $type }}'));
+                    packageSelect.add(new Option('₹390  - 10000 {{ $type }}', '390_10000 {{ $type }}'));
+                    // Add more options as needed for Indian packages
+                }
+            });
+        </script>
         @elseif($type === 'Followers')
 
-                <div class="container">
-                    <div class="row justify-content-center mt-2">
-                        <div class="col-md-12">
-                            <form id="multi-step-form" action="{{ route('store.request') }}" method="post">
-                                @csrf
-                                <div id="step-1" class="form-step">
-                                    <input type="hidden" value="{{$type}}" name="request_for">
-                                    <div class="form-group">
-                                        <label for="country-select">Select User Type</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-globe"></i></span>
-                                            </div>
-                                            <select id="country-select" name="user_type" class="form-control">
-                                                <option value="#">Select User Type</option>
-                                                <option value="foreign">Foreign</option>
-                                                <option value="indian">Indian</option>
-                                            </select>
-                                        </div>
+        <div class="container">
+            <div class="row justify-content-center mt-2">
+                <div class="col-md-12">
+                    <form id="multi-step-form" action="{{ route('store.request') }}" method="post"  enctype="multipart/form-data">
+                        @csrf
+                        <div id="step-1" class="form-step">
+                            <input type="hidden" value="{{$type}}" name="request_for">
+                            <div class="form-group">
+                                <label for="country-select">Select User Type</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-globe"></i></span>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="package-select">Select Package</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-box"></i></span>
-                                            </div>
-                                            <select id="package-select" name="package" class="form-control">
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="username-input">Enter Username</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                            </div>
-                                            <input id="username-input" name="username" type="text" class="form-control" placeholder="Instagram Username">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email-input">Enter Email</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                            </div>
-                                            <input id="email-input" name="email" type="email" class="form-control" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="url-input">Instragram URL:</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-link"></i></span>
-                                            </div>
-                                            <input id="url-input" type="text" name="url" class="form-control" placeholder="Instagram URL">
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn btn-primary" onclick="nextStep()"><i class="fas fa-arrow-right"></i> Next</button>
+                                    <select id="country-select" name="user_type" class="form-control">
+                                        <option value="#">Select User Type</option>
+                                        <option value="foreign">Foreign</option>
+                                        <option value="indian">Indian</option>
+                                    </select>
                                 </div>
-
-                                <div id="step-2" class="form-step" style="display: none;">
-                                    <div class="form-group">
-                                        <label for="upi-instructions">Instructions for Google Pay:</label>
-                                        <p>Scan the QR code or use the following UPI ID in your Paytm app to complete the payment:</p>
-                                        <p><strong>UPI ID:</strong> Jeranyt.upi</p>
-                                        <img src="{{ asset('assets/qrcode.jpeg') }}" alt="Google Pay QR Code" class="img-fluid">
+                            </div>
+                            <div class="form-group">
+                                <label for="package-select">Select Package</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-box"></i></span>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="transaction-input">Transaction ID:</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
-                                            </div>
-                                            <input id="transaction-input" type="text" name="transaction_id" class="form-control" placeholder="Transaction ID">
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center">
-                                        <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Previous</button>
-                                        <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Submit</button>
-                                    </div>
+                                    <select id="package-select" name="package" class="form-control">
+                                    </select>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="form-group">
+                                <label for="username-input">Enter Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input id="username-input" name="username" type="text" class="form-control" placeholder="Instagram Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email-input">Enter Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input id="email-input" name="email" type="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="url-input">Instragram URL:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-link"></i></span>
+                                    </div>
+                                    <input id="url-input" type="text" name="url" class="form-control" placeholder="Instagram URL">
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()"><i class="fas fa-arrow-right"></i> Next</button>
                         </div>
-                    </div>
+
+                        <div id="step-2" class="form-step" style="display: none;">
+                            <div class="form-group">
+                                <label for="upi-instructions">Instructions for Google Pay:</label>
+                                <p>Scan the QR code or use the following UPI ID in your Paytm app to complete the payment:</p>
+                                <p><strong>UPI ID:</strong> Jeranyt.upi</p>
+                                <img src="{{ asset('assets/qrcode.jpeg') }}" alt="Google Pay QR Code" class="img-fluid">
+                            </div>
+                            <div class="form-group">
+                                <label for="transaction-input">Transaction ID:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
+                                    </div>
+                                    <input id="transaction-input" type="text" name="transaction_id" class="form-control" placeholder="Transaction ID">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="image-upload">Screenshot:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-image"></i></span>
+                                    </div>
+                                    <input id="image-upload" type="file" name="image" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Submit</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+            </div>
+        </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-                <script>
-                    function nextStep() {
-                        // Validate step 1 fields
-                        var package = document.getElementsByName('package')[0].value;
-                        var country = document.getElementsByName('user_type')[0].value;
-                        var username = document.getElementsByName('username')[0].value;
-                        var email = document.getElementsByName('email')[0].value;
-                        var url = document.getElementsByName('url')[0].value;
+        <script>
+            function nextStep() {
+                // Validate step 1 fields
+                var package = document.getElementsByName('package')[0].value;
+                var country = document.getElementsByName('user_type')[0].value;
+                var username = document.getElementsByName('username')[0].value;
+                var email = document.getElementsByName('email')[0].value;
+                var url = document.getElementsByName('url')[0].value;
 
-                        if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
-                            alert('Please fill in all fields .');
-                            return;
-                        }
+                if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
+                    alert('Please fill in all fields .');
+                    return;
+                }
 
-                        document.getElementById('step-1').style.display = 'none';
-                        document.getElementById('step-2').style.display = 'block';
-                    }
+                document.getElementById('step-1').style.display = 'none';
+                document.getElementById('step-2').style.display = 'block';
+            }
 
-                    function prevStep() {
-                        document.getElementById('step-2').style.display = 'none';
-                        document.getElementById('step-1').style.display = 'block';
-                    }
+            function prevStep() {
+                document.getElementById('step-2').style.display = 'none';
+                document.getElementById('step-1').style.display = 'block';
+            }
 
-                    document.getElementById('package-select').addEventListener('change', function() {
-                        var selectedOption = this.value.split('_');
-                        var price = selectedOption[0];
-                        var request = selectedOption[1];
-                    });
-                    document.getElementById('country-select').addEventListener('change', function() {
-                        var packageSelect = document.getElementById('package-select');
-                        var selectedCountry = this.value;
+            document.getElementById('package-select').addEventListener('change', function() {
+                var selectedOption = this.value.split('_');
+                var price = selectedOption[0];
+                var request = selectedOption[1];
+            });
+            document.getElementById('country-select').addEventListener('change', function() {
+                var packageSelect = document.getElementById('package-select');
+                var selectedCountry = this.value;
 
-                        packageSelect.innerHTML = '';
+                packageSelect.innerHTML = '';
 
-                        if (selectedCountry === 'foreign') {
-                            packageSelect.add(new Option('₹79 - 500 {{ $type }}', '79_500 {{ $type }}'));
-                            packageSelect.add(new Option('149 - 1000 {{ $type }}', '149_1000 {{ $type }}'));
-                            packageSelect.add(new Option('279 Rs - 2000 {{ $type }}', '279_2000 {{ $type }}'));
-                            packageSelect.add(new Option('590 Rs - 5000 {{ $type }}', '590_5000 {{ $type }}'));
-                            packageSelect.add(new Option('990 Rs - 10,000 {{ $type }}', '990_10,000 {{ $type }}'));
-                            packageSelect.add(new Option('1790 Rs - 20,000 {{ $type }}', '1790_20,000 {{ $type }}'));
-                            packageSelect.add(new Option('4590 Rs - 50,000 {{ $type }}', '4590_50,000 {{ $type }}'));
+                if (selectedCountry === 'foreign') {
+                    packageSelect.add(new Option('₹79 - 500 {{ $type }}', '79_500 {{ $type }}'));
+                    packageSelect.add(new Option('₹149 - 1000 {{ $type }}', '149_1000 {{ $type }}'));
+                    packageSelect.add(new Option('₹279 - 2000 {{ $type }}', '279_2000 {{ $type }}'));
+                    packageSelect.add(new Option('₹590 - 5000 {{ $type }}', '590_5000 {{ $type }}'));
+                    packageSelect.add(new Option('₹990 - 10,000 {{ $type }}', '990_10,000 {{ $type }}'));
+                    packageSelect.add(new Option('₹1790 - 20,000 {{ $type }}', '1790_20,000 {{ $type }}'));
+                    packageSelect.add(new Option('₹4590 - 50,000 {{ $type }}', '4590_50,000 {{ $type }}'));
 
-                        } else if (selectedCountry === 'indian') {
-                            packageSelect.add(new Option('98 Rs - 500 {{ $type }}', '98_500 {{ $type }}'));
-                            packageSelect.add(new Option('189 Rs - 1000 {{ $type }}', '189_1000 {{ $type }}'));
-                            packageSelect.add(new Option('359 Rs - 2000 {{ $type }}', '359_2000 {{ $type }}'));
-                            packageSelect.add(new Option('690 Rs - 5000 {{ $type }}', '690_5000 {{ $type }}'));
-                            packageSelect.add(new Option('1190 Rs - 10,000 {{ $type }}', '1190_10,000 {{ $type }}'));
-                            packageSelect.add(new Option('2190 Rs - 20,000 {{ $type }}', '2190_20,000 {{ $type }}'));
+                } else if (selectedCountry === 'indian') {
+                    packageSelect.add(new Option('₹98  - 500 {{ $type }}', '98_500 {{ $type }}'));
+                    packageSelect.add(new Option('₹189  - 1000 {{ $type }}', '189_1000 {{ $type }}'));
+                    packageSelect.add(new Option('₹359  - 2000 {{ $type }}', '359_2000 {{ $type }}'));
+                    packageSelect.add(new Option('₹690  - 5000 {{ $type }}', '690_5000 {{ $type }}'));
+                    packageSelect.add(new Option('₹1190  - 10,000 {{ $type }}', '1190_10,000 {{ $type }}'));
+                    packageSelect.add(new Option('₹2190  - 20,000 {{ $type }}', '2190_20,000 {{ $type }}'));
 
-                        }
-                    });
-                </script>
+                }
+            });
+        </script>
 
         @elseif($type === 'Views')
 
         <div class="container">
             <div class="row justify-content-center mt-2">
                 <div class="col-md-12">
-                    <form id="multi-step-form" action="{{ route('store.request') }}" method="post">
-                        @csrf
+                <form id="multi-step-form" action="{{ route('store.request') }}" method="post"  enctype="multipart/form-data">
+                     @csrf
                         <div id="step-1" class="form-step">
                             <input type="hidden" value="{{$type}}" name="request_for">
                             <div class="form-group">
@@ -403,6 +421,15 @@
                                     <input id="transaction-input" type="text" name="transaction_id" class="form-control" placeholder="Transaction ID">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="image-upload">Screenshot:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-image"></i></span>
+                                    </div>
+                                    <input id="image-upload" type="file" name="image" class="form-control">
+                                </div>
+                            </div>
 
                             <div class="text-center">
                                 <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Previous</button>
@@ -415,37 +442,35 @@
         </div>
 
 
-            <script>
-                function nextStep() {
-                        // Validate step 1 fields
-                        var package = document.getElementsByName('package')[0].value;
-                        var country = document.getElementsByName('user_type')[0].value;
-                        var username = document.getElementsByName('username')[0].value;
-                        var email = document.getElementsByName('email')[0].value;
-                        var url = document.getElementsByName('url')[0].value;
+        <script>
+            function nextStep() {
+                // Validate step 1 fields
+                var package = document.getElementsByName('package')[0].value;
+                var country = document.getElementsByName('user_type')[0].value;
+                var username = document.getElementsByName('username')[0].value;
+                var email = document.getElementsByName('email')[0].value;
+                var url = document.getElementsByName('url')[0].value;
 
-                        if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
-                            alert('Please fill in all fields .');
-                            return;
-                        }
+                if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
+                    alert('Please fill in all fields .');
+                    return;
+                }
 
-                        document.getElementById('step-1').style.display = 'none';
-                        document.getElementById('step-2').style.display = 'block';
-                    }
+                document.getElementById('step-1').style.display = 'none';
+                document.getElementById('step-2').style.display = 'block';
+            }
 
-                    function prevStep() {
-                        document.getElementById('step-2').style.display = 'none';
-                        document.getElementById('step-1').style.display = 'block';
-                    }
+            function prevStep() {
+                document.getElementById('step-2').style.display = 'none';
+                document.getElementById('step-1').style.display = 'block';
+            }
 
-                    document.getElementById('package-select').addEventListener('change', function() {
-                        var selectedOption = this.value.split('_');
-                        var price = selectedOption[0];
-                        var request = selectedOption[1];
-                    });
-
-
-            </script>
+            document.getElementById('package-select').addEventListener('change', function() {
+                var selectedOption = this.value.split('_');
+                var price = selectedOption[0];
+                var request = selectedOption[1];
+            });
+        </script>
         @else
         @endif
     </div>

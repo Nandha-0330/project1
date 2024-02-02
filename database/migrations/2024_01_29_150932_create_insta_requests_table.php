@@ -21,6 +21,7 @@ return new class extends Migration
         $table->string('request_for')->nullable();
         $table->string('status')->nullable();
         $table->string('email');
+        $table->string('image')->nullable();
         $table->timestamps();
 
     });
