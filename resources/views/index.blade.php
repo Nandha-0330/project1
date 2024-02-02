@@ -38,6 +38,7 @@
                     <!-- <a href="#TikTok" class="btn-buy" style="margin:5px;">Explore TikTok Services</a>
                     <a href="#Twitter" class="btn-buy" style="margin:5px;">Explore Twitter Services</a> -->
                     <a href="#Facebook" class="btn-buy" style="margin:5px;">Explore Facebook Services</a>
+                    <a href="#Youtube" class="btn-buy" style="margin:5px;">Explore Youtube Services</a>
                     <!-- <a href="#Threads" class="btn-buy" style="margin:5px;">Explore Threads Services</a> -->
                 </div>
             </div>
@@ -122,7 +123,7 @@
                     <div class="box">
                     <h3>Skyrocket Your Followers</h3>
                         <h4>
-                            <sup>₹</sup>590+
+                            <sup>₹</sup>90+
                         </h4>
                         <ul>
                             <li>🚀 Instant Followers Delivery</li>

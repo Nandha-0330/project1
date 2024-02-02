@@ -17,62 +17,35 @@
                     <h4>Instagram Services</h4>
                     <ul>
                         <li>
-                            <a href="https://www.prime-likes.com/free-instagram-likes.html">Instagram Likes</a>
+                            <a href="{{ url('/instagram?value=likes') }}">Instagram Likes</a>
                         </li>
                         <li>
-                            <a href="https://www.prime-likes.com/free-instagram-followers.html">Instagram Followers</a>
+                            <a href="{{ url('/instagram?value=followers') }}">Instagram Followers</a>
                         </li>
                         <li>
-                            <a href="https://www.prime-likes.com/free-instagram-views.html">Instagram Views</a>
+                            <a href="{{ url('/instagram?value=views') }}">Instagram Views</a>
                         </li>
                     </ul>
                 </div>
-                {{-- <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>TikTok Services</h4>
-                    <ul>
-                        <li>
-                            <a href="https://www.prime-likes.com/free-tiktok-followers.html">Free TikTok Followers</a>
-                        </li>
-                        <li>
-                            <a href="https://www.prime-likes.com/free-tiktok-likes.html">Free TikTok Likes</a>
-                        </li>
-                        <li>
-                            <a href="https://www.prime-likes.com/free-tiktok-views.html">Free TikTok Views</a>
-                        </li>
-                </div>
-                <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Twitter Services</h4>
-                    <ul>
-                        <li>
-                            <a href="https://www.prime-likes.com/free-twitter-followers.html">Free Twitter Followers</a>
-                        </li>
-                        <li>
-                            <a href="https://www.prime-likes.com/free-twitter-likes.html">Free Twitter Likes</a>
-                        </li>
-                        <li>
-                            <a href="https://www.prime-likes.com/free-twitter-retweets.html">Free Twitter Retweets</a>
-                        </li>
-                </div> --}}
+                
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Facebook Services</h4>
                     <ul>
+                        
                         <li>
-                            <a href="https://www.prime-likes.com/free-facebook-likes.html">Facebook Likes</a>
-                        </li>
-                        <li>
-                            <a href="https://www.prime-likes.com/free-facebook-followers.html">Facebook Followers</a>
+                            <a href="{{ url('/facebook?value=followers') }}">Facebook Followers</a>
                         </li>
                 </div>
-                {{-- <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Threads Services</h4>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Youtube Services</h4>
                     <ul>
+                        
                         <li>
-                            <a href="https://www.prime-likes.com/free-threads-likes.html">Free Threads Likes</a>
+                            <a href="{{ url('/youtube?value=subscribers') }}">Youtube Subscribers</a>
                         </li>
-                        <li>
-                            <a href="https://www.prime-likes.com/free-threads-followers.html">Free Threads Followers</a>
-                        </li>
-                </div> --}}
+                </div>
+                
             </div>
         </div>
     </div>
