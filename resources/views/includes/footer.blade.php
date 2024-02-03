@@ -7,11 +7,9 @@
                     <h4>Pages</h4>
                     <ul>
                         <li>
-                            <a href="https://www.prime-likes.com/">Home</a>
+                            <a href="/">Home</a>
                         </li>
-                        <li>
-                            <a href="cookie-policy.html">Cookie policy</a>
-                        </li>
+                       
                 </div>
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Instagram Services</h4>
@@ -27,7 +25,7 @@
                         </li>
                     </ul>
                 </div>
-                
+            
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Facebook Services</h4>
                     <ul>

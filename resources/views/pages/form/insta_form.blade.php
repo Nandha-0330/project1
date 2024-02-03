@@ -5,7 +5,7 @@
         <p>Jeranyt is a unique Instagram platform where you can get followers on Instagram, fast and unlimited. Don't take
             our word for it, use form below to receive your fast, Instagram followers.</p>
     </div>
-   
+
     <div class="body__card card-step card-select">
         <h2>Select your Instagram {{ $type }} package below:</h2>
         <div class="message message--red">
@@ -18,24 +18,13 @@
             </div>
         </div>
 
-        @if ($errors->any())
-        <div  >
-            <strong>Validation Error:</strong>
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li class="bg-red-200 text-red-800 p-4 rounded mb-2 ">{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-
-
         @if ($type === 'Likes')
         <div class="container">
             <div class="row justify-content-center mt-2">
                 <div class="col-md-12">
-                <form id="multi-step-form" action="{{ route('store.request') }}" method="post"  enctype="multipart/form-data">
-                  @csrf
+                @include('pages.form.error')
+                    <form id="multi-step-form" action="{{ route('store.request') }}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div id="step-1" class="form-step">
                             <input type="hidden" value="{{$type}}" name="request_for">
                             <div class="form-group">
@@ -46,8 +35,8 @@
                                     </div>
                                     <select id="country-select" name="user_type" class="form-control">
                                         <option value="#">Select User Type</option>
-                                        <option value="foreign">Foreign</option>
-                                        <option value="indian">Indian</option>
+                                        <option value="foreign">Foreign Followers</option>
+                                        <option value="indian">Indian Followers</option>
                                     </select>
                                 </div>
                             </div>
@@ -92,12 +81,7 @@
                         </div>
 
                         <div id="step-2" class="form-step" style="display: none;">
-                            <div class="form-group">
-                                <label for="upi-instructions">Instructions for Google Pay:</label>
-                                <p>Scan the QR code or use the following UPI ID in your Paytm app to complete the payment:</p>
-                                <p><strong>UPI ID:</strong> Jeranyt.upi</p>
-                                <img src="{{ asset('assets/qrcode.jpeg') }}" alt="Google Pay QR Code" class="img-fluid">
-                            </div>
+                        @include('pages.form.paymentinfo')
                             <div class="form-group">
                                 <label for="transaction-input">Transaction ID:</label>
                                 <div class="input-group">
@@ -140,10 +124,17 @@
                 var url = document.getElementsByName('url')[0].value;
 
                 if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
-                    alert('Please fill in all fields .');
+                    alert('Please fill in all fields.');
                     return;
                 }
 
+                // URL Validation
+                const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+
+                if (!urlRegex.test(url.trim())) {
+                    alert('Please enter a valid URL.');
+                    return;
+                }
                 document.getElementById('step-1').style.display = 'none';
                 document.getElementById('step-2').style.display = 'block';
             }
@@ -187,7 +178,8 @@
         <div class="container">
             <div class="row justify-content-center mt-2">
                 <div class="col-md-12">
-                    <form id="multi-step-form" action="{{ route('store.request') }}" method="post"  enctype="multipart/form-data">
+                @include('pages.form.error')
+                    <form id="multi-step-form" action="{{ route('store.request') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div id="step-1" class="form-step">
                             <input type="hidden" value="{{$type}}" name="request_for">
@@ -199,8 +191,8 @@
                                     </div>
                                     <select id="country-select" name="user_type" class="form-control">
                                         <option value="#">Select User Type</option>
-                                        <option value="foreign">Foreign</option>
-                                        <option value="indian">Indian</option>
+                                        <option value="foreign">Foreign Followers</option>
+                                        <option value="indian">Indian Followers</option>
                                     </select>
                                 </div>
                             </div>
@@ -245,12 +237,7 @@
                         </div>
 
                         <div id="step-2" class="form-step" style="display: none;">
-                            <div class="form-group">
-                                <label for="upi-instructions">Instructions for Google Pay:</label>
-                                <p>Scan the QR code or use the following UPI ID in your Paytm app to complete the payment:</p>
-                                <p><strong>UPI ID:</strong> Jeranyt.upi</p>
-                                <img src="{{ asset('assets/qrcode.jpeg') }}" alt="Google Pay QR Code" class="img-fluid">
-                            </div>
+                        @include('pages.form.paymentinfo')
                             <div class="form-group">
                                 <label for="transaction-input">Transaction ID:</label>
                                 <div class="input-group">
@@ -294,7 +281,15 @@
                 var url = document.getElementsByName('url')[0].value;
 
                 if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
-                    alert('Please fill in all fields .');
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                // URL Validation
+                const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+
+                if (!urlRegex.test(url.trim())) {
+                    alert('Please enter a valid URL.');
                     return;
                 }
 
@@ -344,8 +339,9 @@
         <div class="container">
             <div class="row justify-content-center mt-2">
                 <div class="col-md-12">
-                <form id="multi-step-form" action="{{ route('store.request') }}" method="post"  enctype="multipart/form-data">
-                     @csrf
+                @include('pages.form.error')
+                    <form id="multi-step-form" action="{{ route('store.request') }}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div id="step-1" class="form-step">
                             <input type="hidden" value="{{$type}}" name="request_for">
                             <div class="form-group">
@@ -392,12 +388,7 @@
                         </div>
 
                         <div id="step-2" class="form-step" style="display: none;">
-                            <div class="form-group">
-                                <label for="upi-instructions">Instructions for Google Pay:</label>
-                                <p>Scan the QR code or use the following UPI ID in your Paytm app to complete the payment:</p>
-                                <p><strong>UPI ID:</strong> Jeranyt.upi</p>
-                                <img src="{{ asset('assets/qrcode.jpeg') }}" alt="Google Pay QR Code" class="img-fluid">
-                            </div>
+                        @include('pages.form.paymentinfo')
                             <div class="form-group">
                                 <label for="transaction-input">Transaction ID:</label>
                                 <div class="input-group">
@@ -437,8 +428,16 @@
                 var email = document.getElementsByName('email')[0].value;
                 var url = document.getElementsByName('url')[0].value;
 
-                if (username.trim() === '' || email.trim() === '' || country.trim() === '' || package.trim() === '' || url.trim() === '') {
-                    alert('Please fill in all fields .');
+                if (username.trim() === '' || email.trim() === ''  || package.trim() === '' || url.trim() === '') {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                // URL Validation
+                const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+
+                if (!urlRegex.test(url.trim())) {
+                    alert('Please enter a valid URL.');
                     return;
                 }
 

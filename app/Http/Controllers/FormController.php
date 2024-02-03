@@ -26,7 +26,7 @@ class FormController extends Controller
         else {
             abort(404);
         }
-        return view('pages.instagram', ['type' => $type , 'app_name' => $app_name]);
+        return view('pages.socialapp', ['type' => $type , 'app_name' => $app_name]);
     }
 
     public function store(Request $request)
@@ -78,7 +78,7 @@ class FormController extends Controller
         else {
             abort(404);
         }
-        return view('pages.facebook', ['type' => $type , 'app_name' => $app_name]);
+        return view('pages.socialapp', ['type' => $type , 'app_name' => $app_name]);
     }
 
     public function fbstore(Request $request)
@@ -127,7 +127,7 @@ class FormController extends Controller
         else {
             abort(404);
         }
-        return view('pages.youtube', ['type' => $type , 'app_name' => $app_name]);
+        return view('pages.socialapp', ['type' => $type , 'app_name' => $app_name]);
     }
 
     public function ytstore(Request $request)

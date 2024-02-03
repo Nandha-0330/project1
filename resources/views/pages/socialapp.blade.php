@@ -22,14 +22,21 @@
         <section class="modern-checkout__header">
             <div class="header__inner">
                 <a class="header__logo" >
-                    <img src="img/prime-likes-logo.png" draggable="false" width="220" />
+                    <img src="{{ asset('assets/img/jeranyt.png') }}" draggable="false" width="220" />
                 </a>
             </div>
         </section>
 
         <section class="modern-checkout__body">
 
+        @if ($app_name === 'Instagram')
             @include('pages.form.insta_form')
+        @elseif ($app_name === 'Facebook')
+             @include('pages.form.fb_form')
+        @elseif ($app_name === 'Youtube')
+            @include('pages.form.yt_form')
+        @else
+        @endif
          <!-- form -->
                 
         </section>

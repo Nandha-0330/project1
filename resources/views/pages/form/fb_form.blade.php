@@ -18,20 +18,12 @@
             </div>
         </div>
 
-        @if ($errors->any())
-                        <div class="bg-red-200 text-red-800 p-4 rounded mb-4">
-                            <strong>Validation Error:</strong>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-         @endif
+    
         @if($type === 'Followers')
         <div class="container">
             <div class="row justify-content-center mt-2">
                 <div class="col-md-12">
+                @include('pages.form.error')
                 <form id="multi-step-form" action="{{ route('store.request.fb') }}" method="post"  enctype="multipart/form-data">
                         @csrf
                         <div id="step-1" class="form-step">
@@ -82,12 +74,7 @@
                         </div>
 
                         <div id="step-2" class="form-step" style="display: none;">
-                            <div class="form-group">
-                                <label for="upi-instructions">Instructions for Paytm Pay:</label>
-                                <p>Scan the QR code or use the following UPI ID in your Paytm app to complete the payment:</p>
-                                <p><strong>UPI ID:</strong> Jeranyt.upi</p>
-                                <img src="{{ asset('assets/qrcode.jpeg') }}" alt="Google Pay QR Code" class="img-fluid">
-                            </div>
+                            @include('pages.form.paymentinfo')
                             <div class="form-group">
                                 <label for="transaction-input">Transaction ID:</label>
                                 <div class="input-group">
@@ -126,11 +113,18 @@
                         var email = document.getElementsByName('email')[0].value;
                         var url = document.getElementsByName('url')[0].value;
 
-                        if (username.trim() === '' || email.trim() === '' || package.trim() === '' || url.trim() === '') {
-                            alert('Please fill in all fields .');
-                            return;
-                        }
+                        if (username.trim() === '' || email.trim() === ''  || package.trim() === '' || url.trim() === '') {
+                    alert('Please fill in all fields.');
+                    return;
+                }
 
+                // URL Validation
+                const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+
+                if (!urlRegex.test(url.trim())) {
+                    alert('Please enter a valid URL.');
+                    return;
+                }
                         document.getElementById('step-1').style.display = 'none';
                         document.getElementById('step-2').style.display = 'block';
                     }

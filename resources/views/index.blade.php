@@ -6,7 +6,7 @@
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-9 text-center">
-                <img width="500px;" src="img/prime-likes-logo.png" alt="" class="img-fluid" style="padding-bottom:25px;">
+                <img width="500px;" src="{{ asset('assets/img/jeranyt.png') }}" alt="" class="img-fluid" style="padding-bottom:25px;">
                 <h1>Jeranyt - Boost Your Social Media Presence</h1>
                 <br>
                 <h2 style="font-weight:bold;">With Jeranyt, you can receive unlimited likes, followers, and views on platforms like Instagram, TikTok, Twitter, Threads, and Facebook.</h2>
@@ -34,11 +34,11 @@
             <div class="box">
                 <h3>Explore Our Services:</h3>
                 <div class="btn-wrap">
-                    <a href="#Instagram" class="btn-buy" style="margin:5px;">Explore Instagram Services</a>
+                    <a href="#Instagram" class="btn-buy" style="margin:5px;"> Buy Instagram Services</a>
                     <!-- <a href="#TikTok" class="btn-buy" style="margin:5px;">Explore TikTok Services</a>
                     <a href="#Twitter" class="btn-buy" style="margin:5px;">Explore Twitter Services</a> -->
-                    <a href="#Facebook" class="btn-buy" style="margin:5px;">Explore Facebook Services</a>
-                    <a href="#Youtube" class="btn-buy" style="margin:5px;">Explore Youtube Services</a>
+                    <a href="#Facebook" class="btn-buy" style="margin:5px;">Buy Facebook Services</a>
+                    <a href="#Youtube" class="btn-buy" style="margin:5px;">Buy Youtube Services</a>
                     <!-- <a href="#Threads" class="btn-buy" style="margin:5px;">Explore Threads Services</a> -->
                 </div>
             </div>
@@ -46,14 +46,14 @@
             <br>
             <div id="Instagram" class="row">
                 <h3 style="font-weight:bold;padding-bottom:5x;">
-                    <i class="bi bi-instagram"></i>Supercharge Your Instagram Presence! <i class="bi bi-instagram"></i>
+                    <i class="bi bi-instagram"></i>Buy Instagram Likes,Followers and Views! <i class="bi bi-instagram"></i>
                 </h3>
                 <p>Elevate your Instagram game with our exclusive services tailored just for you. Ready to skyrocket your likes, followers, and views? Choose your boost below:</p>
                 <br>
                 <br>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Boost Your Likes</h3>
+                        <h3>Buy Likes</h3>
                         <h4>
                             <sup>₹</sup>39+
                         </h4>
@@ -67,13 +67,13 @@
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/instagram?value=likes') }}" class="btn-buy">Get More Likes Now</a>
+                            <a href="{{ url('/instagram?value=likes') }}" class="btn-buy">Order Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Skyrocket Your Followers</h3>
+                        <h3>Buy Followers</h3>
                         <h4>
                             <sup>₹</sup>39+
                         </h4>
@@ -87,13 +87,13 @@
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/instagram?value=followers') }}" class="btn-buy">Get More Followers Now</a>
+                            <a href="{{ url('/instagram?value=followers') }}" class="btn-buy">Order Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Boost Your Views</h3>
+                        <h3>Buy Views</h3>
                         <h4>
                             <sup>₹</sup>39+
                         </h4>
@@ -107,21 +107,21 @@
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/instagram?value=views') }}" class="btn-buy">Get More Views Now</a>
+                            <a href="{{ url('/instagram?value=views') }}" class="btn-buy">Order Now</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="Facebook" class="row">
                 <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
-                    <i class="bi bi-facebook"></i>Facebook Likes and Followers <i class="bi bi-facebook"></i>
+                    <i class="bi bi-facebook"></i>Buy Facebook Likes and Followers <i class="bi bi-facebook"></i>
                 </h3>
                 <p>Looking to grow your likes and engagement on Facebook? Select one of the options below:</p>
                 <br>
                 <br>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                    <h3>Skyrocket Your Followers</h3>
+                    <h3>Buy Facebook Followers</h3>
                         <h4>
                             <sup>₹</sup>90+
                         </h4>
@@ -135,21 +135,21 @@
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/facebook?value=followers') }}" class="btn-buy">Get Facebook Followers</a>
+                            <a href="{{ url('/facebook?value=followers') }}" class="btn-buy">Order Now</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="Youtube" class="row">
                 <h3 style="font-weight:bold;padding-top:40px;padding-bottom:5px;">
-                    <i class="bi bi-youtube"></i>Youtube <i class="bi bi-youtube"></i>
+                    <i class="bi bi-youtube"></i>Buy Youtube  Services<i class="bi bi-youtube"></i>
                 </h3>
                 <p>Looking to grow your Subscribers and engagement on Youtube? Select one of the options below:</p>
                 <br>
                 <br>
                 <div class="col-lg-4 col-md-6">
                     <div class="box">
-                        <h3>Skyrocket Your Subscribers</h3>
+                        <h3>Buy Subscribers</h3>
                         <h4>
                             <sup>₹</sup>590+
                         </h4>
@@ -163,7 +163,7 @@
                             </strong>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="{{ url('/youtube?value=subscribers') }}" class="btn-buy">Get Youtube Subscribers</a>
+                            <a href="{{ url('/youtube?value=subscribers') }}" class="btn-buy">Order Now</a>
                         </div>
                     </div>
                 </div>
