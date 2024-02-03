@@ -77,7 +77,7 @@
                                     <input id="url-input" type="text" name="url" class="form-control" placeholder="Instagram URL">
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()"><i class="fas fa-arrow-right"></i> Next</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="nextStep()"> Order Now <i class="fas fa-arrow-right"></i></button>
                         </div>
 
                         <div id="step-2" class="form-step" style="display: none;">
@@ -233,7 +233,7 @@
                                     <input id="url-input" type="text" name="url" class="form-control" placeholder="Instagram URL">
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()"><i class="fas fa-arrow-right"></i> Next</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="nextStep()"> Order Now <i class="fas fa-arrow-right"></i></button>
                         </div>
 
                         <div id="step-2" class="form-step" style="display: none;">
@@ -384,9 +384,8 @@
                                     <input id="url-input" type="text" name="url" class="form-control" placeholder="Instagram URL">
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()"><i class="fas fa-arrow-right"></i> Next</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="nextStep()"> Order Now <i class="fas fa-arrow-right"></i></button>
                         </div>
-
                         <div id="step-2" class="form-step" style="display: none;">
                         @include('pages.form.paymentinfo')
                             <div class="form-group">
@@ -423,7 +422,6 @@
             function nextStep() {
                 // Validate step 1 fields
                 var package = document.getElementsByName('package')[0].value;
-                var country = document.getElementsByName('user_type')[0].value;
                 var username = document.getElementsByName('username')[0].value;
                 var email = document.getElementsByName('email')[0].value;
                 var url = document.getElementsByName('url')[0].value;

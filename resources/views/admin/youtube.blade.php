@@ -46,7 +46,7 @@
 
     <!-- Content for Instagram Requests -->
     <div class="dashboard-content">
-        <h2>Instagram Requests</h2>
+        <h2>Youtube Requests</h2>
         <div class="table-responsive">
         <style>
 
@@ -135,7 +135,6 @@
             <th>Package</th>
             <th>Username</th>
             <th>URL</th>
-            <th>UserType</th>
             <th>Email</th>
             <th>Request For</th>
             <th>image</th>
@@ -144,15 +143,13 @@
         </tr>
     </thead>
     <tbody class="table-container">
-    @foreach($insta_requests as $request)
-    @if($request->status != 'approved' && $request->status != 'disapproved')
+    @foreach($yt_requests as $request)
         <tr>
             <td>{{ $request->id }}</td>
             <td>{{ $request->transaction_id }}</td>
             <td>{{ $request->package }}</td>
             <td>{{ $request->username }}</td>
             <td><a href="{{ $request->url }}" target="_blank">{{ $request->url }}</a></td>
-            <td>{{ $request->user_type }}</td>
             <td>{{ $request->email }}</td>
             <td>{{ $request->request_for }}</td>
             <td>
@@ -168,7 +165,7 @@
             <td>
                 <div class="btn-container">
                 @if($request->status != 'approved' && $request->status != 'disapproved')
-                        <form id="approveForm{{ $request->id }}" action="{{ route('send.email') }}" method="post">
+                        <form id="approveForm{{ $request->id }}" action="{{ route('send.ytemail') }}" method="post">
                             @csrf
                             <input type="hidden" name="email" value="{{ $request->email }}">
                             <input type="hidden" name="package" value="{{ $request->package }}">
@@ -180,7 +177,7 @@
                             </button>
                         </form>
 
-                        <form action="{{ route('disapprove') }}" method="post">
+                        <form action="{{ route('ytdisapprove') }}" method="post">
                             @csrf
                             <input type="hidden" name="email" value="{{ $request->email }}">
                             <input type="hidden" name="id" value="{{ $request->id }}">
@@ -190,7 +187,7 @@
                 </div>
             </td>
         </tr>
-        @endif
+
     @endforeach
 
 </tbody>

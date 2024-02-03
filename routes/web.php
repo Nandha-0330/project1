@@ -43,6 +43,11 @@ Route::get('logout',[LoginController::class,'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+        Route::get('/facebook_requests', [AdminController::class, 'facebook'])->name('facebook_requests');
+        Route::get('/youtube_requests', [AdminController::class, 'youtube'])->name('youtube_requests');
+        
+        
+       
 
     });
 
@@ -50,3 +55,9 @@ Route::middleware(['auth'])->group(function () {
 
 });
 Route::post('/send-email', [EmailController::class, 'sendEmail'])->name('send.email');
+Route::post('/send-ytemail', [EmailController::class, 'sendYTEmail'])->name('send.ytemail');
+Route::post('/send-fbemail', [EmailController::class, 'sendFBEmail'])->name('send.fbemail');
+
+Route::post('/cancel_request', [EmailController::class, 'disapprove'])->name('disapprove');
+Route::post('/cancel_ytrequest', [EmailController::class, 'ytdisapprove'])->name('ytdisapprove');
+Route::post('/cancel_fbrequest', [EmailController::class, 'fbdisapprove'])->name('fbdisapprove');

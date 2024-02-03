@@ -1,6 +1,6 @@
 <div class="body__inner">
     <div class="body__description">
-        <h1>{{$app_name}} {{ $type }}</h1>
+        <h1 >{{$app_name}} {{ $type }}</h1>
         <br>
         <p>Jeranyt is a unique Youtube platform where you can get Subscribers  on Youtube, fast and unlimited. Don't take
             our word for it, use form below to receive your fast, Youtube Subscribers.</p>
@@ -67,7 +67,7 @@
                                     <input id="url-input" type="text" name="url" class="form-control" placeholder="Youtube URL">
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()"><i class="fas fa-arrow-right"></i> Next</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="nextStep()"> Order Now <i class="fas fa-arrow-right"></i></button>
                         </div>
 
                         <div id="step-2" class="form-step" style="display: none;">

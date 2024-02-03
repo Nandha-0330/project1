@@ -70,7 +70,7 @@
                                     <input id="url-input" type="text" name="url" class="form-control" placeholder="Facebook URL">
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="nextStep()"><i class="fas fa-arrow-right"></i> Next</button>
+                            <button type="button" class="btn btn-primary btn-block" onclick="nextStep()"> Order Now <i class="fas fa-arrow-right"></i></button>
                         </div>
 
                         <div id="step-2" class="form-step" style="display: none;">

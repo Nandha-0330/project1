@@ -37,7 +37,7 @@ class FormController extends Controller
             'package' => 'required|string',
             'username' => 'required|string',
             'url' => 'required|url',
-            'user_type' => 'required|string',
+            'user_type' => 'string',
             'request_for ' => 'string',
             'email' => 'required|email',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
