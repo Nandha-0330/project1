@@ -10,7 +10,7 @@
     </div>
 
     <div id="qr-code-details" class="payment-details">
-        <p>Scan the QR code or use the following UPI ID in your payment app to complete the payment:</p>
+        <p>Upi & Qr Code & Bank Transfer generate unique reference number & ( Payment Screenshot with payment id ) please enter it in field below to verify and confirm payment.:</p>
         <p><strong class="highlight-text">UPI ID: Jeranyt@upi</strong></p>
         <img src="{{ asset('assets/qrcode.jpeg') }}" alt="UPI QR Code" class="img-fluid" id="payment-img">
     </div>

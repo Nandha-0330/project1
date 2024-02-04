@@ -40,5 +40,6 @@
          <!-- form -->
 
         </section>
+        @include('whatsapp')
     </div>
 </html>
