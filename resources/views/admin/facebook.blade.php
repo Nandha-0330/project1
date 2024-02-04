@@ -32,7 +32,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('youtube_requests') }}">YouTube Requests</a>
             </li>
-           
+
         </ul>
     </div>
 </nav>
@@ -60,7 +60,7 @@
 
     .table-container {
         max-height: 5%;
-     
+
     }
 
     .actions-buttons {

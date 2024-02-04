@@ -33,7 +33,7 @@ Route::post('/store-yt-request', [FormController::class, 'ytstore'])->name('stor
 Route::get('/thank-you', function () {return view('thankyou');})->name('thankyou');
 
 
-Route::view('register','admin.auth.register')->name('admin.register.view')->middleware('guest');
+// Route::view('register','admin.auth.register')->name('admin.register.view')->middleware('guest');
 Route::view('login','admin.auth.login')->name('admin.login.view')->middleware('guest');
 Route::post('/aunthenticate',[LoginController::class,'authenticate'])->name('admin.login');
 Route::post('/store',[RegisterController::class,'store'])->name('store');
@@ -45,9 +45,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
         Route::get('/facebook_requests', [AdminController::class, 'facebook'])->name('facebook_requests');
         Route::get('/youtube_requests', [AdminController::class, 'youtube'])->name('youtube_requests');
-        
-        
-       
+
+
+
 
     });
 

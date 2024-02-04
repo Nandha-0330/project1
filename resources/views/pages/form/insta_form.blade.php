@@ -35,8 +35,8 @@
                                     </div>
                                     <select id="country-select" name="user_type" class="form-control">
                                         <option value="#">Select User Type</option>
-                                        <option value="foreign">Foreign Followers</option>
-                                        <option value="indian">Indian Followers</option>
+                                        <option value="foreign">Foreign Likes</option>
+                                        <option value="indian">Indian Likes</option>
                                     </select>
                                 </div>
                             </div>

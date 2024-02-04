@@ -110,13 +110,16 @@
                         var email = document.getElementsByName('email')[0].value;
                         var url = document.getElementsByName('url')[0].value;
 
-                        if (username.trim() === '' || email.trim() === ''  || package.trim() === '' || url.trim() === '') {
-                    alert('Please fill in all fields.');
-                    return;
-                }
+
+
+
+                        if (username.trim() === '' || email.trim() === ''  || package.trim() === '' || url.trim() === ''  ) {
+                            alert('Please fill in all fields.');
+                            return;
+                        }
 
                 // URL Validation
-                const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+                const urlRegex = /^(http|https):\/\/[^ "]+$/;
 
                 const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ;
 

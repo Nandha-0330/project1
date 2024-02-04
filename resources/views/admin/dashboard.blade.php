@@ -32,7 +32,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('youtube_requests') }}">YouTube Requests</a>
             </li>
-           
+
         </ul>
     </div>
 </nav>
@@ -60,7 +60,7 @@
 
     .table-container {
         max-height: 5%;
-     
+
     }
 
     .actions-buttons {
@@ -145,7 +145,6 @@
     </thead>
     <tbody class="table-container">
     @foreach($insta_requests as $request)
-    @if($request->status != 'approved' && $request->status != 'disapproved')
         <tr>
             <td>{{ $request->id }}</td>
             <td>{{ $request->transaction_id }}</td>
@@ -190,7 +189,7 @@
                 </div>
             </td>
         </tr>
-        @endif
+
     @endforeach
 
 </tbody>
