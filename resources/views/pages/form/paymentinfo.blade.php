@@ -1,5 +1,6 @@
 <div class="payment-container">
     <label for="payment-instructions">Payment Instructions:</label>
+    <p><strong class="highlight-text-must">** Must Enter Transaction ID **</strong></p>
     <p>Choose your preferred payment method:</p>
 
     <div class="payment-method-links">
@@ -10,7 +11,7 @@
 
     <div id="qr-code-details" class="payment-details">
         <p>Scan the QR code or use the following UPI ID in your payment app to complete the payment:</p>
-        <p><strong class="highlight-text">UPI ID:</strong> Jeranyt.upi</p>
+        <p><strong class="highlight-text">UPI ID: Jeranyt@upi</strong></p>
         <img src="{{ asset('assets/qrcode.jpeg') }}" alt="UPI QR Code" class="img-fluid" id="payment-img">
     </div>
 
@@ -59,6 +60,12 @@
     .highlight-text {
         background-color: #17a2b8;
         color: #fff;
+        padding: 3px;
+        border-radius: 3px;
+    }
+    .highlight-text-must {
+        background-color: #ffd500;
+        color: #000000;
         padding: 3px;
         border-radius: 3px;
     }

@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-between">
         <!-- Uncomment below if you prefer to use an image logo -->
         <a href="index.html" class="logo">
-            <img src="img/prime-likes-logo-grey.png" alt="" class="img-fluid">
+            <img src="{{ asset('assets/img/jeranytshop.png') }}" alt="" class="img-fluid" ">
         </a>
         <nav id="navbar" class="navbar">
             <ul>
@@ -36,7 +36,7 @@
                         <li>
                             <a href="{{ url('/facebook?value=followers') }}">Facebook Followers</a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -48,7 +48,7 @@
                         <li>
                             <a href="{{ url('/youtube?value=subscribers') }}">Youtube Subscribers</a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <!-- <li class="dropdown">

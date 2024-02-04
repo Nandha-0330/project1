@@ -22,7 +22,7 @@
         <section class="modern-checkout__header">
             <div class="header__inner">
                 <a class="header__logo" >
-                    <img src="{{ asset('assets/img/jeranyt.png') }}" draggable="false" width="220" />
+                    <img src="{{ asset('assets/img/jeranytshop.png') }}" draggable="false" width="220" />
                 </a>
             </div>
         </section>
@@ -38,7 +38,7 @@
         @else
         @endif
          <!-- form -->
-                
+
         </section>
     </div>
 </html>

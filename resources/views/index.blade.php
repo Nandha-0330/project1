@@ -6,7 +6,7 @@
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-9 text-center">
-                <img width="500px;" src="{{ asset('assets/img/jeranyt.png') }}" alt="" class="img-fluid" style="padding-bottom:25px;">
+                <img width="500px;" src="{{ asset('assets/img/jeranytshop.png') }}" alt="" class="img-fluid" style="padding-bottom:25px;">
                 <h1>Jeranyt - Boost Your Social Media Presence</h1>
                 <br>
                 <h2 style="font-weight:bold;">With Jeranyt, you can receive unlimited likes, followers, and views on platforms like Instagram, TikTok, Twitter, Threads, and Facebook.</h2>
@@ -26,11 +26,11 @@
 
     <section id="pricing" class="pricing">
         <div class="container">
-            <div class="section-title">
+            {{-- <div class="section-title">
                 <h2>Enhance Your Social Media Presence Today:</h2>
                 <strong>Unlimited likes, views, and followers for your favorite platforms: Instagram, TikTok, Twitter, Threads, and Facebook.<br>
                 Choose your service below and start growing your social media presence.</strong>
-            </div>
+            </div> --}}
             <div class="box">
                 <h3>Explore Our Services:</h3>
                 <div class="btn-wrap">
@@ -75,7 +75,7 @@
                     <div class="box">
                         <h3>Buy Followers</h3>
                         <h4>
-                            <sup>₹</sup>39+
+                            <sup>₹</sup>79+
                         </h4>
                         <ul>
                             <li>🚀 Instant Followers Delivery</li>
@@ -167,9 +167,9 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
-            
+
         </div>
     </section>
     <!-- End Pricing Section -->

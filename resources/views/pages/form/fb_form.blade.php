@@ -1,11 +1,11 @@
 <div class="body__inner">
-    <div class="body__description">
+    {{-- <div class="body__description">
         <h1>Facebook {{ $type }}</h1>
         <br>
         <p>Jeranyt is a unique Facebook platform where you can get followers on Facebook, fast and unlimited. Don't take
             our word for it, use form below to receive your fast, Facebook followers.</p>
-    </div>
-    
+    </div> --}}
+
     <div class="body__card card-step card-select">
         <h2>Select your Facebook {{ $type }} package below:</h2>
         <div class="message message--red">
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-    
+
         @if($type === 'Followers')
         <div class="container">
             <div class="row justify-content-center mt-2">
@@ -120,6 +120,13 @@
 
                 // URL Validation
                 const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+
+                const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ;
+
+                if (!emailRegex.test(email.trim())) {
+                    alert('Please enter a valid email.');
+                    return;
+                }
 
                 if (!urlRegex.test(url.trim())) {
                     alert('Please enter a valid URL.');
