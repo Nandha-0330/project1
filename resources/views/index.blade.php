@@ -6,15 +6,15 @@
     <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-9 text-center">
-                <img width="500px;" src="{{ asset('assets/img/jeranytshop.png') }}" alt="" class="img-fluid" style="padding-bottom:25px;">
-                <h1>Jeranyt - Boost Your Social Media Presence</h1>
+                {{-- <img width="500px;" src="{{ asset('assets/img/jeranytshop.png') }}" alt="" class="img-fluid" style="padding-bottom:25px;"> --}}
+                <h1>Buy Instagram Followers To Boost Your Social Media Profiles 💎</h1>
                 <br>
-                <h2 style="font-weight:bold;">With Jeranyt, you can receive unlimited likes, followers, and views on platforms like Instagram, TikTok, Twitter, Threads, and Facebook.</h2>
+                <h2 style="font-weight:bold;">Real Instagram Followers With Organic Delivery and Advertising Methods!</h2>
             </div>
         </div>
-        <div class="text-center">
+        {{-- <div class="text-center">
             <a href="#pricing" class="btn-get-started scrollto">Click here to boost your social media presence</a>
-        </div>
+        </div> --}}
     </div>
 </section>
 
