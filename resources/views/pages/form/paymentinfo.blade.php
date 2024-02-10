@@ -1,4 +1,4 @@
-<div class="payment-container">
+<!-- <div class="payment-container">
     <label for="payment-instructions">Payment Instructions:</label>
     <p><strong class="highlight-text-must">** Must Enter Transaction ID **</strong></p>
     <p>Choose your preferred payment method:</p>
@@ -17,12 +17,10 @@
 
     <div id="bank-transfer-details" class="payment-details" style="display: none;">
         <p>For bank transfer, use the following details:</p>
-        <!-- <p><strong class="highlight-text">Account Name:</strong> Your Name</p>
-        <p><strong class="highlight-text">Account Number:</strong> XXXX-XXXX-XXXX</p>
-        <p><strong class="highlight-text">Bank Name:</strong> Your Bank</p> -->
+ 
         <img src="{{ asset('assets/bankdetails.jpeg') }}" alt="Bank Transfer Details" class="img-fluid" id="payment-img">
     </div>
-</div>
+</div> -->
 
 <style>
     .payment-container {
@@ -94,3 +92,32 @@
         });
     }
 </script>
+                       
+                       
+                       
+ <!-- <div id="step-2" class="form-step" style="display: none;">
+                        @include('pages.form.paymentinfo')
+                            <div class="form-group">
+                                <label for="transaction-input">Transaction ID:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
+                                    </div>
+                                    <input id="transaction-input" type="text" name="transaction_id" class="form-control" placeholder="Transaction ID">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="image-upload">Screenshot:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-image"></i></span>
+                                    </div>
+                                    <input id="image-upload" type="file" name="image" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Submit</button>
+                            </div>
+                        </div> -->

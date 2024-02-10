@@ -33,14 +33,14 @@ class FormController extends Controller
     {
         // Validate the incoming request data
         $request->validate([
-            'transaction_id' => 'required|string',
+            'transaction_id' => 'string',
             'package' => 'required|string',
             'username' => 'required|string',
             'url' => 'required|url',
             'user_type' => 'string',
             'request_for ' => 'string',
-            'email' => 'required|email',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'email' => 'email',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
       
         if ($request->hasFile('image')) {
@@ -48,6 +48,7 @@ class FormController extends Controller
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $image->storeAs('uploads', $imageName, 'public'); // Adjust the storage path as needed
         }
+        $imageName = "";
 
         InstaRequest::create([
             'transaction_id' => $request->input('transaction_id'),
@@ -57,7 +58,7 @@ class FormController extends Controller
             'user_type' => $request->input('user_type'),
             'request_for' => $request->input('request_for'),
             'email' => $request->input('email'),
-            'image' => 'uploads/' . $imageName,
+            'image' => !empty($imageName) ? 'uploads/' . $imageName : null,
 
         ]
 
@@ -85,13 +86,13 @@ class FormController extends Controller
     {
         // Validate the incoming request data
         $request->validate([
-            'transaction_id' => 'required|string',
+            'transaction_id' => 'string',
             'package' => 'required|string',
             'username' => 'required|string',
             'url' => 'required|url',
             'request_for ' => 'string',
             'email' => 'required|email',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         // Create a new request record in the database
         if ($request->hasFile('image')) {
@@ -99,7 +100,8 @@ class FormController extends Controller
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $image->storeAs('uploads', $imageName, 'public'); // Adjust the storage path as needed
         }
-
+        $imageName = "";
+        
         FacebookRequest::create([
             'transaction_id' => $request->input('transaction_id'),
             'package'=> $request->input('package'),
@@ -108,7 +110,7 @@ class FormController extends Controller
             'user_type' => $request->input('user_type'),
             'request_for' => $request->input('request_for'),
             'email' => $request->input('email'),
-            'image' => 'uploads/' . $imageName,
+            'image' => !empty($imageName) ? 'uploads/' . $imageName : null,
         ]
         );
         Session::flash('success', 'Data inserted successfully!');
@@ -134,13 +136,13 @@ class FormController extends Controller
     {
         // Validate the incoming request data
         $request->validate([
-            'transaction_id' => 'required|string',
+            'transaction_id' => 'string',
             'package' => 'required|string',
             'username' => 'required|string',
             'url' => 'required|url',
             'request_for ' => 'string',
             'email' => 'required|email',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         // Create a new request record in the database
         if ($request->hasFile('image')) {
@@ -148,6 +150,8 @@ class FormController extends Controller
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $image->storeAs('uploads', $imageName, 'public'); // Adjust the storage path as needed
         }
+
+        $imageName = "";
 
         YoutubeRequest::create([
             'transaction_id' => $request->input('transaction_id'),
@@ -157,7 +161,7 @@ class FormController extends Controller
             'user_type' => $request->input('user_type'),
             'request_for' => $request->input('request_for'),
             'email' => $request->input('email'),
-            'image' => 'uploads/' . $imageName,
+            'image' => !empty($imageName) ? 'uploads/' . $imageName : null,
         ]
         );
         Session::flash('success', 'Data inserted successfully!');

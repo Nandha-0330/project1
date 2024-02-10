@@ -70,11 +70,13 @@
                                     <input id="url-input" type="text" name="url" class="form-control" placeholder="Facebook URL">
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary btn-block" onclick="nextStep()"> Order Now <i class="fas fa-arrow-right"></i></button>
+                            <input id="transaction-input" type="hidden" name="transaction_id" class="form-control" value='dummy' placeholder="Transaction ID">
+                            <button type="submit" class="btn btn-primary btn-block"> Order Now <i class="fas fa-arrow-right"></i></button>
                         </div>
 
+                         <!-- 
                         <div id="step-2" class="form-step" style="display: none;">
-                            @include('pages.form.paymentinfo')
+                        
                             <div class="form-group">
                                 <label for="transaction-input">Transaction ID:</label>
                                 <div class="input-group">
@@ -98,7 +100,7 @@
                                 <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Previous</button>
                                 <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Submit</button>
                             </div>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>
