@@ -83,7 +83,7 @@
         <img src="{{ asset('assets/step3.jpeg') }}" alt="Step 3">
         <div class="step-content">
             <p>Step 3: Ordered Successfully</p>
-            <button id="action-button" onclick="handleButtonClick()">Next</button>
+            <button id="action-button" onclick="handleButtonClick()">To Complete Process</button>
         </div>
     </div>
 </div>
